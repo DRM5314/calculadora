@@ -1,0 +1,46 @@
+version: '3'
+
+services:
+  redis:
+    image: 'redis:latest'
+  api:
+    build:
+      dockerfile: Dockerfile
+      context: ./Parte3
+    image: api:1.0
+    volumes:
+      - ./Parte3/api:/app/api
+      - ./Parte3/package.json:/app/package.json
+
+  site:
+    stdin_open: true
+    build:
+      dockerfile: Dockerfile
+      context: ./Parte2
+    image: calc:1.0
+    volumes:
+      - ./Parte2/public:/app/public
+      - ./Parte2/src:/app/src
+      - ./Parte2/package.json:/app/package.json
+
+  worker:
+    build:
+      dockerfile: Dockerfile
+      context: ./Worker
+    image: worker:1.0
+    volumes:
+      - ./Worker/src:/app/worker/src
+      - ./Worker/package.json:/app/worker/package.json
+
+  nginx:
+    depends_on:
+      - site
+      - api
+      - worker
+    restart: always
+    build:
+      dockerfile: Dockerfile
+      context: ./nginx
+    image: mi-nginx:1.0
+    ports:
+      - "3000:80"

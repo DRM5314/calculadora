@@ -1,0 +1,45 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node', '/usr/bin/npm', 'run', 'startdev' ]
+2 info using npm@3.5.2
+3 info using node@v8.10.0
+4 verbose run-script [ 'prestartdev', 'startdev', 'poststartdev' ]
+5 info lifecycle Worker@1.0.0~prestartdev: Worker@1.0.0
+6 silly lifecycle Worker@1.0.0~prestartdev: no script for prestartdev, continuing
+7 info lifecycle Worker@1.0.0~startdev: Worker@1.0.0
+8 verbose lifecycle Worker@1.0.0~startdev: unsafe-perm in lifecycle true
+9 verbose lifecycle Worker@1.0.0~startdev: PATH: /usr/share/npm/bin/node-gyp-bin:/home/david/Documentos/Cursos/2do Semestre 2021/Archivos/lab/parte4/Worker/node_modules/.bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
+10 verbose lifecycle Worker@1.0.0~startdev: CWD: /home/david/Documentos/Cursos/2do Semestre 2021/Archivos/lab/parte4/Worker
+11 silly lifecycle Worker@1.0.0~startdev: Args: [ '-c', 'nodemon app.js' ]
+12 silly lifecycle Worker@1.0.0~startdev: Returned: code: 1  signal: null
+13 info lifecycle Worker@1.0.0~startdev: Failed to exec startdev script
+14 verbose stack Error: Worker@1.0.0 startdev: `nodemon app.js`
+14 verbose stack Exit status 1
+14 verbose stack     at EventEmitter.<anonymous> (/usr/share/npm/lib/utils/lifecycle.js:232:16)
+14 verbose stack     at emitTwo (events.js:126:13)
+14 verbose stack     at EventEmitter.emit (events.js:214:7)
+14 verbose stack     at ChildProcess.<anonymous> (/usr/share/npm/lib/utils/spawn.js:24:14)
+14 verbose stack     at emitTwo (events.js:126:13)
+14 verbose stack     at ChildProcess.emit (events.js:214:7)
+14 verbose stack     at maybeClose (internal/child_process.js:925:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:209:5)
+15 verbose pkgid Worker@1.0.0
+16 verbose cwd /home/david/Documentos/Cursos/2do Semestre 2021/Archivos/lab/parte4/Worker
+17 error Linux 5.4.0-87-generic
+18 error argv "/usr/bin/node" "/usr/bin/npm" "run" "startdev"
+19 error node v8.10.0
+20 error npm  v3.5.2
+21 error code ELIFECYCLE
+22 error Worker@1.0.0 startdev: `nodemon app.js`
+22 error Exit status 1
+23 error Failed at the Worker@1.0.0 startdev script 'nodemon app.js'.
+23 error Make sure you have the latest version of node.js and npm installed.
+23 error If you do, this is most likely a problem with the Worker package,
+23 error not with npm itself.
+23 error Tell the author that this fails on your system:
+23 error     nodemon app.js
+23 error You can get information on how to open an issue for this project with:
+23 error     npm bugs Worker
+23 error Or if that isn't available, you can get their info via:
+23 error     npm owner ls Worker
+23 error There is likely additional logging output above.
+24 verbose exit [ 1, true ]

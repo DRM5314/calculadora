@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial</title>
+</head>
+
+<body>
+    <%- include ('partials/navegador.ejs'); -%>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <section>
+        <table class="table table-bordered table-dark">
+            <thead>
+                <tr id="cabecera">
+                    <th scope="col">Tipo operacion</th>
+                    <th scope="col">Operador 1</th>
+                    <th scope="col">Operador 2</th>
+                    <th scope="col">Resultado</th>
+                </tr>
+            </thead>
+            <tbody id="tableBodyPS">
+                <% for(var i in resultado){ let res1 = resultado[i].split("."); %>
+                    <tr>
+                            <td>
+                                <%= res1[0];%>
+                            </td>
+                            <td>
+                                <%= res1[1];%>
+                            </td>
+                            <td>
+                                <%= res1[2];%>
+                            </td>
+                            <td>
+                                <%= res1[3];%>
+                            </td>
+                    </tr>
+                    <% } %>
+            </tbody>
+        </table>
+</body>
+<script src="ManejadorTabla.ts"></script>
+
+</html>

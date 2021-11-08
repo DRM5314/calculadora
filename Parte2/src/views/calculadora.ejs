@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cal</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <%- include ('partials/navegador.ejs'); -%>
+    <form action="/operar" method="POST">
+        <div class="container">
+                <div class="alert alert-info" role="alert">
+                    <div><br></div>
+                    <div class="row">
+                        <div class="col">
+                            <input id="entrada1" name="entrada1" type="text" class="form-control" placeholder="Entrada 1"
+                                aria-label="Entrada 1" value=<%= operador1%>>
+                                
+                        </div>
+                        <div class="col">
+                            <input id="entrada2" name="entrada2" type="text" class="form-control" placeholder="Entrada 2"
+                                aria-label="Entrada 2" value=<%= operador2%>>
+                                
+                        </div>
+                        <div class="row">
+                            <div class="col" style="text-align: center;">Tipo operacion</div>
+                            <div class="col">
+                                <select id="opcionOperacion" name="opcionOperacion" class="form-select" aria-label="Default select example">
+                                    <option value="suma">Suma</option>
+                                    <option value="resta">Resta</option>
+                                    <option value="multiplicacion">Multiplicacion</option>
+                                    <option value="division">Division</option>
+                                    <option value="potencia">Potencia</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <button type="submit" class="btn btn-primary" >Operar</button>
+                        </div>
+                    </div>
+                    <div><br></div>
+                    <div class="row-5">
+                        <div class="col align-self-center">
+                            <div class="alert alert-success" role="alert">
+                                <label id="resultado" style="text-align: center;"><%= resultado%> </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </form>
+    
+</body>
+</html>
